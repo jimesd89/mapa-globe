@@ -1,4 +1,4 @@
-<script >
+<script>
 import MapaGlobe from "./components/MapaGlobe.vue"
 
 export default {

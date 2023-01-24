@@ -3,15 +3,15 @@
 <div ref="mapContainer" class="map-container"></div>
    <div id='map' style='width: 600x; height: 400px;'></div>
 </template>
-<script setup>
+<script setup lang="ts">
 import 'mapbox-gl/dist/mapbox-gl.css';
 import {onMounted, ref} from 'vue';
 import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiamltZW5hbWFwOTkiLCJhIjoiY2xkOWg1MHF1MDcwcjNvczl3MWlmYWo0YSJ9.4JljQunKYrxQkJZF8XjAHA';
 
-const mapContainer = ref<HTMLElement>(null)
-onMounted(()=>{
+const mapContainer = ref<HTMLElement>()
+onMounted(() => {
 
     const map = new mapboxgl.Map({
         container: 'map', // container ID
